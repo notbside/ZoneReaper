@@ -208,16 +208,6 @@ sudo ln -s $(pwd)/dns-recon.py /usr/local/bin/zonereaper
 ./dns-recon.py -d target.com --all --format markdown -o bounty_report.md
 ```
 
-### Example 4: HTB/CTF Usage
-
-```bash
-# Quick HTB lab assessment
-./dns-recon.py -d inlanefreight.htb -zt -dr -v
-
-# Find hidden subdomains
-./dns-recon.py -d inlanefreight.htb -se -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt
-```
-
 ---
 
 ## 📁 Output Formats
@@ -235,20 +225,6 @@ ZONE TRANSFER VULNERABILITIES:
 ...
 ```
 
-### JSON Output
-```json
-{
-  "domain": "example.com",
-  "timestamp": "2025-01-07T14:30:00",
-  "vulnerabilities": {
-    "zone_transfer": {
-      "vulnerable": true,
-      "nameservers": ["ns1.example.com"],
-      "records_count": 156
-    }
-  }
-}
-```
 
 ### HTML Report
 Beautiful, professional HTML report with:
@@ -256,47 +232,7 @@ Beautiful, professional HTML report with:
 - 🎨 Color-coded vulnerability indicators
 - 📱 Mobile-responsive design
 - 🖨️ Print-friendly layout
-
----
-
-## 🛠️ Configuration
-
-Create a `config.yaml` file:
-
-```yaml
-# ZoneReaper Configuration
-
-general:
-  threads: 10
-  timeout: 10
-  retry_attempts: 3
-  output_dir: "results"
-
-dns:
-  resolvers:
-    - 8.8.8.8
-    - 1.1.1.1
-  fallback_resolver: 8.8.8.8
-
-scanning:
-  rate_limit: 100  # requests per second
-  delay_between_requests: 0.1
-  
-wordlists:
-  default: "wordlists/subdomains-top10000.txt"
-  large: "wordlists/subdomains-top1million.txt"
-
-notifications:
-  slack_webhook: ""
-  discord_webhook: ""
-  telegram_bot_token: ""
-
-reports:
-  default_format: "html"
-  include_timestamps: true
-  save_raw_data: true
-```
-
+- 
 ---
 
 ## 🔒 Security & Ethics
@@ -320,42 +256,6 @@ reports:
 ### Legal Notice
 
 The authors and contributors are not responsible for misuse of this tool. Users are responsible for complying with applicable laws and regulations.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-### Development Setup
-
-```bash
-# Clone and setup development environment
-git clone https://github.com/notbside/ZoneReaper.git
-cd ZoneReaper
-
-# Create virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install development dependencies
-pip install -r requirements-dev.txt
-
-# Run tests
-pytest tests/
-
-# Run linting
-flake8 dns-recon.py
-pylint dns-recon.py
-```
-
-### Contribution Guidelines
-
-1. 🍴 Fork the repository
-2. 🌿 Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. ✨ Commit your changes (`git commit -m 'Add AmazingFeature'`)
-4. 📤 Push to the branch (`git push origin feature/AmazingFeature`)
-5. 🎉 Open a Pull Request
 
 ---
 
@@ -403,19 +303,6 @@ in the Software without restriction...
 - 📖 [DNS Security Best Practices](https://www.cloudflare.com/learning/dns/dns-security/)
 - 🔐 [OWASP Testing Guide - DNS Testing](https://owasp.org/www-project-web-security-testing-guide/)
 - 📜 [RFC 5936 - DNS Zone Transfer Protocol](https://tools.ietf.org/html/rfc5936)
-- 🎓 [HackTheBox Academy - DNS Attacks](https://academy.hackthebox.com/)
-
----
-
-## 📈 Roadmap
-
-- [ ] Integration with Burp Suite
-- [ ] Machine learning for anomaly detection
-- [ ] Cloud DNS provider support (AWS Route53, Cloudflare)
-- [ ] GUI interface
-- [ ] Mobile app (Android/iOS)
-- [ ] Real-time collaboration features
-- [ ] Integration with SIEM systems
 
 ---
 
@@ -436,7 +323,7 @@ in the Software without restriction...
 
 <div align="center">
 
-### 💖 Made with passion by notbside
+###  Made with passion by notbside
 
 **If you find this tool useful, please consider giving it a ⭐!**
 
