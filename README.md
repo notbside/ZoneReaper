@@ -9,8 +9,8 @@
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg?style=for-the-badge&logo=python)](https://www.python.org/)
 [![Stars](https://img.shields.io/github/stars/notbside/ZoneReaper?style=for-the-badge)](https://github.com/notbside/ZoneReaper/stargazers)
 
-**Professional DNS reconnaissance toolkit for penetration testing and bug bounty hunting**
-
+## 🔑 Keywords
+`dns zone transfer` `dns security scanner` `axfr vulnerability` `subdomain enumeration` `dns reconnaissance` `penetration testing` `bug bounty tools` `network security` `dns enumeration` `ethical hacking tools`
 [🚀 Quick Start](#-installation) • [📖 Documentation](#-usage) • [✨ Features](#-features) 
 
 </div>
