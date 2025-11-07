@@ -1,0 +1,97 @@
+# ZoneReaper .gitignore
+# Author: notbside
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Results and Output
+results/
+*.txt
+*.json
+*.html
+*.csv
+*.xml
+!requirements.txt
+!README.md
+
+# Logs
+logs/
+*.log
+
+# Configuration
+config.yaml
+config.yml
+.env
+.env.local
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Wordlists (optional - comment out if you want to track them)
+wordlists/*.txt
+!wordlists/README.md
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Backup files
+*.bak
+*.backup
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# API keys and secrets
+secrets.py
+api_keys.txt
+tokens.txt
+
+# Test coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
