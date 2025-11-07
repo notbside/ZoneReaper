@@ -13,8 +13,6 @@
 
 [🚀 Quick Start](#-installation) • [📖 Documentation](#-usage) • [✨ Features](#-features) • [🤝 Contributing](#-contributing)
 
-![ZoneReaper Demo](https://via.placeholder.com/800x400/0a0e27/00d9ff?text=ZoneReaper+Demo)
-
 </div>
 
 ---
