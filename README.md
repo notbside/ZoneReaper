@@ -89,16 +89,6 @@ chmod +x dns-recon.py zone-transfer-scanner.sh
 sudo ln -s $(pwd)/dns-recon.py /usr/local/bin/zonereaper
 ```
 
-### Docker Installation
-
-```bash
-# Build Docker image
-docker build -t zonereaper .
-
-# Run with Docker
-docker run -it zonereaper -d example.com
-```
-
 ### Requirements
 
 - Python 3.8 or higher
@@ -217,17 +207,6 @@ docker run -it zonereaper -d example.com
 # 3. Generate report for submission
 ./dns-recon.py -d target.com --all --format markdown -o bounty_report.md
 ```
-
-### Example 4: HTB/CTF Usage
-
-```bash
-# Quick HTB lab assessment
-./dns-recon.py -d inlanefreight.htb -zt -dr -v
-
-# Find hidden subdomains
-./dns-recon.py -d inlanefreight.htb -se -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt
-```
-
 ---
 
 ## 📁 Output Formats
@@ -269,46 +248,6 @@ Beautiful, professional HTML report with:
 
 ---
 
-## 🛠️ Configuration
-
-Create a `config.yaml` file:
-
-```yaml
-# ZoneReaper Configuration
-
-general:
-  threads: 10
-  timeout: 10
-  retry_attempts: 3
-  output_dir: "results"
-
-dns:
-  resolvers:
-    - 8.8.8.8
-    - 1.1.1.1
-  fallback_resolver: 8.8.8.8
-
-scanning:
-  rate_limit: 100  # requests per second
-  delay_between_requests: 0.1
-  
-wordlists:
-  default: "wordlists/subdomains-top10000.txt"
-  large: "wordlists/subdomains-top1million.txt"
-
-notifications:
-  slack_webhook: ""
-  discord_webhook: ""
-  telegram_bot_token: ""
-
-reports:
-  default_format: "html"
-  include_timestamps: true
-  save_raw_data: true
-```
-
----
-
 ## 🔒 Security & Ethics
 
 ### ⚠️ Responsible Usage
@@ -330,42 +269,6 @@ reports:
 ### Legal Notice
 
 The authors and contributors are not responsible for misuse of this tool. Users are responsible for complying with applicable laws and regulations.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-### Development Setup
-
-```bash
-# Clone and setup development environment
-git clone https://github.com/notbside/ZoneReaper.git
-cd ZoneReaper
-
-# Create virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install development dependencies
-pip install -r requirements-dev.txt
-
-# Run tests
-pytest tests/
-
-# Run linting
-flake8 dns-recon.py
-pylint dns-recon.py
-```
-
-### Contribution Guidelines
-
-1. 🍴 Fork the repository
-2. 🌿 Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. ✨ Commit your changes (`git commit -m 'Add AmazingFeature'`)
-4. 📤 Push to the branch (`git push origin feature/AmazingFeature`)
-5. 🎉 Open a Pull Request
 
 ---
 
