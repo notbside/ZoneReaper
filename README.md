@@ -1,8 +1,5 @@
 # ZoneReaper
 DNS Zone Transfer exploitation and enumeration framework
-
-mples • Contributing
-
 📋 Overview
 DNS Recon Toolkit is a comprehensive collection of tools for DNS security assessment, penetration testing, and bug bounty hunting. It automates the process of discovering DNS vulnerabilities, including zone transfer misconfigurations, subdomain enumeration, and DNS record analysis.
 🎯 Why This Tool?
