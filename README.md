@@ -11,7 +11,7 @@
 
 **Professional DNS reconnaissance toolkit for penetration testing and bug bounty hunting**
 
-[🚀 Quick Start](#-installation) • [📖 Documentation](#-usage) • [✨ Features](#-features) • [🤝 Contributing](#-contributing)
+[🚀 Quick Start](#-installation) • [📖 Documentation](#-usage) • [✨ Features](#-features) 
 
 </div>
 
