@@ -89,16 +89,6 @@ chmod +x dns-recon.py zone-transfer-scanner.sh
 sudo ln -s $(pwd)/dns-recon.py /usr/local/bin/zonereaper
 ```
 
-### Docker Installation
-
-```bash
-# Build Docker image
-docker build -t zonereaper .
-
-# Run with Docker
-docker run -it zonereaper -d example.com
-```
-
 ### Requirements
 
 - Python 3.8 or higher
